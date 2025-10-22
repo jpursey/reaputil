@@ -9,7 +9,7 @@ cmake_minimum_required (VERSION 3.8)
 ## Set project configuration
 ###############################################################################
 
-project(OZ3 C CXX)
+project(ReapUtil C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -35,11 +35,13 @@ add_subdirectory("${GB_DIR}" gb)
 gb_config()
 gb_external_libraries()
 
+set(GB_INCLUDE_DIRS "${CURRENT_DIR}")
+
 ###############################################################################
 ## Sub Directories
 ###############################################################################
 
 enable_testing()
-add_subdirectory(oz3)
+add_subdirectory(src)
 
-set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT oz3)
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT reaputil)

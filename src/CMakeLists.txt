@@ -4,7 +4,7 @@
 ## in the LICENSE file or at https://opensource.org/licenses/MIT.
 
 set(reaplib_SOURCE
-  clean.cc clean.h
+  clean_project.cc clean_project.h
 )
 
 set(reaplib_DEPS
@@ -22,4 +22,4 @@ set(reaputil_DEPS
   reaplib
 )
 
-gp_add_executable(reaputil)
+gb_add_executable(reaputil)
